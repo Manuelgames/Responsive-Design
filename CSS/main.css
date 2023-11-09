@@ -5,14 +5,6 @@
 4. Visual (shadow box)
 5. Otros
 */
-:root {
-  --principal: #5cceee;
-  --secundario: #24c0eb;
-  --terceario: #cacaca;
-  --color4: #eee8e8;
-  --color5: #f1ebeb;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -34,6 +26,7 @@ header {
   height: 334px;
   min-width: 324px;
   text-align: center;
+  background-image: linear-gradient(to bottom, #24c0eb, #7abfea, #a5c0e2, #bec3d6, #cacaca);
 }
 header .header__contenedor--primario {
   display: flex;
@@ -42,19 +35,60 @@ header .header__contenedor--primario {
   align-items: center;
   width: 100%;
   margin-top: 40px;
-  font-size: 2.4rem;
+}
+header .header__contenedor--primario h2 {
+  color: #f1ebeb;
+  font-size: 3rem;
+  margin-right: 10px;
 }
 header .header__contenedor--primario img {
-  width: 50px;
-  height: 44px;
+  width: 40px;
+  height: 37px;
   align-self: center;
+  margin-right: 10px;
 }
 header .header__contenedor--secundario {
   width: 90%;
   height: 218px;
   min-width: 288px;
   max-width: 900px;
-  margin-top: 10px;
+  margin-top: 40px;
   text-align: center;
   align-self: center;
+}
+header .header__contenedor--secundario h1 {
+  font-size: 2.4rem;
+  color: #f1ebeb;
+  font-weight: bold;
+  line-height: 3rem;
+}
+header .header__contenedor--secundario p {
+  font-size: 1.8rem;
+  color: #f1ebeb;
+}
+header .header__contenedor--secundario .header--button {
+  position: absolute;
+  left: calc(50% - 118px);
+  top: 270px;
+  display: block;
+  margin-top: 35px;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background-color: #eee8e8;
+  /* sombra */
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+header .header__contenedor--secundario .header--button span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url("../assets/icons/descargas.png");
 }/*# sourceMappingURL=main.css.map */

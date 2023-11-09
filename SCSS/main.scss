@@ -5,13 +5,12 @@
 4. Visual (shadow box)
 5. Otros
 */
-:root {
-    --principal: #5cceee;
-    --secundario: #24c0eb;
-    --terceario: #cacaca;
-    --color4: #eee8e8;
-    --color5: #f1ebeb;
-}
+
+$principal: #5cceee;
+$secundario: #24c0eb;
+$terceario: #cacaca;
+$color4: #eee8e8;
+$color5: #f1ebeb;
 
 * {
     box-sizing: border-box;
@@ -23,7 +22,6 @@ html {
     font-size: 62.5%;
     font-family: 'Oswald', sans-serif;
 }
-
 @mixin talla($width, $height) {
     width: $width;
     height: $height;
@@ -36,31 +34,71 @@ html {
     align-items: $align;
 }
 
-
 header {
     position: relative;
     @include displayFlex(column, center, center);
     @include talla(100%, 334px);
     min-width: 324px;
     text-align: center;
-
+    background-image: linear-gradient(to bottom, #24c0eb, #7abfea, #a5c0e2, #bec3d6, #cacaca);
     .header__contenedor--primario {
         @include displayFlex(row, center, center);
         width: 100%;
         margin-top: 40px;
-        font-size: 2.4rem;
+        h2{
+            color: $color5;
+            font-size: 3rem;
+            margin-right: 10px;
+        }
         img {
-            @include talla(50px, 44px);
+            @include talla(40px, 37px);
             align-self: center;
+            margin-right: 10px;
         }
     }
 
-    .header__contenedor--secundario {
+    .header__contenedor--secundario{
         @include talla(90%, 218px);
         min-width: 288px;
         max-width: 900px;
-        margin-top: 10px;
+        margin-top: 40px;
         text-align: center;
         align-self: center;
+        h1{
+            font-size: 2.4rem;
+            color: $color5;
+            font-weight: bold;
+            line-height: 3rem;
+        }
+        p{
+            font-size: 1.8rem;
+            color: $color5;
+        }
+        .header--button{
+            position: absolute;
+            left: calc(50% - 118px);
+            top: 270px;
+            display: block;
+            margin-top: 35px;
+            padding: 15px;
+            width: 229px;
+            height: 48px;
+            background-color: $color4;
+            /* sombra */
+            box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            span{
+                display: inline-block;
+                width: 13px;
+                height: 8px;
+                margin-left: 10px;
+                background-image: url('../assets/icons/descargas.png');
+            }
+        }
     }
 }
