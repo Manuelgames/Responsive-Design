@@ -1,0 +1,66 @@
+/*
+1. Posicionamiento
+2. Modelo de caja
+3. Tipografia
+4. Visual (shadow box)
+5. Otros
+*/
+:root {
+    --principal: #5cceee;
+    --secundario: #24c0eb;
+    --terceario: #cacaca;
+    --color4: #eee8e8;
+    --color5: #f1ebeb;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Oswald', sans-serif;
+}
+
+@mixin talla($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin displayFlex($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+
+header {
+    position: relative;
+    @include displayFlex(column, center, center);
+    @include talla(100%, 334px);
+    min-width: 324px;
+    text-align: center;
+
+    .header__contenedor--primario {
+        @include displayFlex(row, center, center);
+        width: 100%;
+        margin-top: 40px;
+        font-size: 2.4rem;
+        img {
+            @include talla(50px, 44px);
+            align-self: center;
+        }
+    }
+
+    .header__contenedor--secundario {
+        @include talla(90%, 218px);
+        min-width: 288px;
+        max-width: 900px;
+        margin-top: 10px;
+        text-align: center;
+        align-self: center;
+    }
+}
