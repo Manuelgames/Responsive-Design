@@ -1,0 +1,99 @@
+/*
+1. Posicionamiento
+2. Modelo de caja
+3. Tipografia
+4. Visual (shadow box)
+5. Otros
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: #24c0eb;
+}
+body header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 334px;
+  min-width: 324px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #24c0eb, #7abfea, #a5c0e2, #bec3d6, #cacaca);
+}
+body header .header__contenedor--primario {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+body header .header__contenedor--primario h2 {
+  color: #f1ebeb;
+  font-size: 3rem;
+  margin-right: 10px;
+}
+body header .header__contenedor--primario img {
+  width: 40px;
+  height: 37px;
+  align-self: center;
+  margin-right: 10px;
+}
+body header .header__contenedor--secundario {
+  width: 90%;
+  height: 218px;
+  min-width: 288px;
+  max-width: 900px;
+  margin-top: 40px;
+  text-align: center;
+  align-self: center;
+}
+body header .header__contenedor--secundario h1 {
+  font-size: 2.4rem;
+  color: #f1ebeb;
+  font-weight: bold;
+  line-height: 3rem;
+}
+body header .header__contenedor--secundario p {
+  font-size: 1.8rem;
+  color: #f1ebeb;
+}
+body header .header__contenedor--secundario .header--button {
+  position: absolute;
+  left: calc(50% - 118px);
+  top: 270px;
+  display: block;
+  margin-top: 35px;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background-color: #eee8e8;
+  /* sombra */
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+body header .header__contenedor--secundario .header--button span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url("../assets/icons/descargas.png");
+}/*# sourceMappingURL=main.css.map */
