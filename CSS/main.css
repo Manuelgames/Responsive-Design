@@ -16,7 +16,12 @@ html {
   font-family: "Oswald", sans-serif;
 }
 
-header {
+body {
+  width: 100%;
+  height: auto;
+  background-color: #24c0eb;
+}
+body header {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -28,7 +33,7 @@ header {
   text-align: center;
   background-image: linear-gradient(to bottom, #24c0eb, #7abfea, #a5c0e2, #bec3d6, #cacaca);
 }
-header .header__contenedor--primario {
+body header .header__contenedor--primario {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -36,18 +41,18 @@ header .header__contenedor--primario {
   width: 100%;
   margin-top: 40px;
 }
-header .header__contenedor--primario h2 {
+body header .header__contenedor--primario h2 {
   color: #f1ebeb;
   font-size: 3rem;
   margin-right: 10px;
 }
-header .header__contenedor--primario img {
+body header .header__contenedor--primario img {
   width: 40px;
   height: 37px;
   align-self: center;
   margin-right: 10px;
 }
-header .header__contenedor--secundario {
+body header .header__contenedor--secundario {
   width: 90%;
   height: 218px;
   min-width: 288px;
@@ -56,23 +61,23 @@ header .header__contenedor--secundario {
   text-align: center;
   align-self: center;
 }
-header .header__contenedor--secundario h1 {
+body header .header__contenedor--secundario h1 {
   font-size: 2.4rem;
   color: #f1ebeb;
   font-weight: bold;
   line-height: 3rem;
 }
-header .header__contenedor--secundario p {
+body header .header__contenedor--secundario p {
   font-size: 1.8rem;
   color: #f1ebeb;
 }
-header .header__contenedor--secundario .header--button {
+body header .header__contenedor--secundario .header--button {
   position: absolute;
   left: calc(50% - 118px);
   top: 270px;
   display: block;
   margin-top: 35px;
-  padding: 15px;
+  padding: 8px;
   width: 229px;
   height: 48px;
   background-color: #eee8e8;
@@ -85,10 +90,26 @@ header .header__contenedor--secundario .header--button {
   text-decoration: none;
   color: black;
 }
-header .header__contenedor--secundario .header--button span {
-  display: inline-block;
-  width: 13px;
-  height: 8px;
-  margin-left: 10px;
-  background-image: url("../assets/icons/descargas.png");
+body header .header__contenedor--secundario .header--button img {
+  width: 23px;
+  height: 20px;
+  margin: 5px 0 0 10px;
+}
+body main .main__section--objetivo, body main .main__section--desarrollo {
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+body main .main__section--objetivo h2, body main .main__section--desarrollo h2 {
+  padding: 0 20px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  color: #cacaca;
+  text-align: center;
+}
+body main .main__section--objetivo p, body main .main__section--desarrollo p {
+  padding: 0 20px;
+  justify-content: center;
+  font-size: 2rem;
+  color: #eee8e8;
 }/*# sourceMappingURL=main.css.map */

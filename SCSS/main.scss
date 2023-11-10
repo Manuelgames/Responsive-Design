@@ -22,6 +22,7 @@ html {
     font-size: 62.5%;
     font-family: 'Oswald', sans-serif;
 }
+
 @mixin talla($width, $height) {
     width: $width;
     height: $height;
@@ -33,9 +34,11 @@ html {
     justify-content: $content;
     align-items: $align;
 }
-body{
+
+body {
     @include talla(100%, auto);
     background-color: #24c0eb;
+
     header {
         position: relative;
         @include displayFlex(column, center, center);
@@ -43,65 +46,92 @@ body{
         min-width: 324px;
         text-align: center;
         background-image: linear-gradient(to bottom, #24c0eb, #7abfea, #a5c0e2, #bec3d6, #cacaca);
+
         .header__contenedor--primario {
             @include displayFlex(row, center, center);
             width: 100%;
             margin-top: 40px;
-        h2{
-            color: $color5;
-            font-size: 3rem;
-            margin-right: 10px;
+
+            h2 {
+                color: $color5;
+                font-size: 3rem;
+                margin-right: 10px;
+            }
+
+            img {
+                @include talla(40px, 37px);
+                align-self: center;
+                margin-right: 10px;
+            }
         }
-        img {
-            @include talla(40px, 37px);
+
+        .header__contenedor--secundario {
+            @include talla(90%, 218px);
+            min-width: 288px;
+            max-width: 900px;
+            margin-top: 40px;
+            text-align: center;
             align-self: center;
-            margin-right: 10px;
-        }
-    }
-    
-    .header__contenedor--secundario{
-        @include talla(90%, 218px);
-        min-width: 288px;
-        max-width: 900px;
-        margin-top: 40px;
-        text-align: center;
-        align-self: center;
-        h1{
-            font-size: 2.4rem;
-            color: $color5;
-            font-weight: bold;
-            line-height: 3rem;
-        }
-        p{
-            font-size: 1.8rem;
-            color: $color5;
-        }
-        .header--button{
-            position: absolute;
-            left: calc(50% - 118px);
-            top: 270px;
-            display: block;
-            margin-top: 35px;
-            padding: 15px;
-            width: 229px;
-            height: 48px;
-            background-color: $color4;
-            /* sombra */
-            box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
-            border: none;
-            border-radius: 5px;
-            font-size: 1.4rem;
-            font-weight: bold;
-            text-decoration: none;
-            color: black;
-            span{
-                display: inline-block;
-                width: 13px;
-                height: 8px;
-                margin-left: 10px;
-                background-image: url('../assets/icons/descargas.png');
+
+            h1 {
+                font-size: 2.4rem;
+                color: $color5;
+                font-weight: bold;
+                line-height: 3rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+                color: $color5;
+            }
+
+            .header--button {
+                position: absolute;
+                left: calc(50% - 118px);
+                top: 270px;
+                display: block;
+                margin-top: 35px;
+                padding: 8px;
+                width: 229px;
+                height: 48px;
+                background-color: $color4;
+                /* sombra */
+                box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+                border: none;
+                border-radius: 5px;
+                font-size: 1.4rem;
+                font-weight: bold;
+                text-decoration: none;
+                color: black;
+
+                img {
+                    width: 23px;
+                    height: 20px;
+                    margin: 5px 0 0 10px;
+                }
             }
         }
     }
-}
+    main{
+        .main__section--objetivo{
+            @include talla(100%,auto);
+            margin-top: 100px;
+            h2{
+                padding: 0 20px;
+                margin-bottom: 20px;
+                font-size: 3rem;
+                color: $terceario;
+                text-align: center;
+            }
+            p{
+                padding: 0 20px;
+                justify-content: center;
+                font-size: 2rem;
+                color: $color4;
+            }
+        }
+        .main__section--desarrollo{
+            @extend .main__section--objetivo;
+        }
+    }
 }
