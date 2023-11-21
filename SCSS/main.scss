@@ -72,8 +72,8 @@ body {
             min-width: 288px;
             max-width: 900px;
             margin-top: 40px;
-            text-align: center;
             align-self: center;
+            text-align: center;
             h1 {
                 font-size: 2.4rem;
                 color: $color5;
@@ -81,32 +81,28 @@ body {
                 line-height: 3rem;
                 color: black;
             }
-
             p {
                 margin-top: 20px;
                 font-size: 1.8rem;
                 color: black;
             }
-
             .header--button {
                 position: absolute;
+                display: block;
                 left: calc(50% - 118px);
                 top: 270px;
-                display: block;
-                margin-top: 35px;
-                padding: 8px;
                 width: 229px;
                 height: 48px;
-                background-color: $color4;
-                /* sombra */
-                box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
-                border: none;
-                border-radius: 5px;
+                margin-top: 35px;
+                padding: 8px;
                 font-size: 1.4rem;
                 font-weight: bold;
                 text-decoration: none;
                 color: black;
-
+                background-color: $color4;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
                 img {
                     width: 23px;
                     height: 20px;
@@ -120,15 +116,15 @@ body {
             @include talla(100%,auto);
             margin: 100px 0;
             h2{
-                padding: 0 20px;
                 margin-bottom: 20px;
+                padding: 0 20px;
                 font-size: 3rem;
-                color: $terceario;
                 text-align: center;
+                color: $terceario;
             }
             p{
-                padding: 0 20px;
                 justify-content: center;
+                padding: 0 20px;
                 font-size: 2rem;
                 color: $color4;
             }
@@ -139,27 +135,42 @@ body {
     }
     footer{
         position: fixed;
+        @include talla(100%, 100px);
         bottom: 0;
-        z-index: 1;
-        @include talla(100%, 60px);
+        text-align: center;
         background-color: $principal;
-        box-shadow: 1px 2px 2px black;
-        .footer__section--ingresar{ 
-            display: flex;
-            height: 100%;
-            justify-content: space-around;
-            align-items: center;
+        border-top: 1px solid black;
+        box-shadow: 1px 1px 8px rgb(47, 46, 46);
+        z-index: 1;
+        h3{
+            margin-top: 10px;
+            font-size: 2rem;
+            font-weight: 100;
+            color: white;
+        }
+        .footer__section--modal{ 
+            position: relative;
+            @include talla(100%, 100%);
             background-color: black;
-            opacity: 1;
+            z-index: 4;
+        }
+        .footer__section--ingresar{ 
+            @include displayFlex(row, space-around, center);
+            @include talla(100%,100%);
             p{
-                display: flex;
-                width: 100px;
-                height: 30px;
-                align-items: center;
-                justify-content: center;
-                background-color: #24c0eb;
+                position: relative;
+                @include displayFlex(row, center, center);
+                height: 40px;
+                width: 200px;
+                margin-bottom: 25px;
+                font-size: 2rem;
+                font-weight: 600;
+                color: white;
+                background-color: $secundario;
                 border-radius: 10px;
+                box-shadow: 1px 2px 1px rgb(83, 81, 81);
                 opacity: 1;
+                z-index: 3;
             }
         }
     }
