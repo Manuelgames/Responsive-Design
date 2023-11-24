@@ -5,7 +5,10 @@
 4. Visual (shadow box)
 5. Otros
 */
-
+//Fonts
+//thin 100
+//regular 400
+//medium 500 italic
 $principal: #5cceee;
 $secundario: #24c0eb;
 $terceario: #cacaca;
@@ -20,7 +23,7 @@ $color5: #f1ebeb;
 
 html {
     font-size: 62.5%;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 @mixin talla($width, $height) {
@@ -40,7 +43,7 @@ a{
 }
 body {
     @include talla(100%, auto);
-    background-color: #24c0eb;
+    background-color: #86c1f5;
     header {
         position: relative;
         @include displayFlex(column, center, center);
@@ -112,6 +115,7 @@ body {
         }
     }
     main{
+        margin-bottom: 130px;
         .main__section--objetivo{
             @include talla(100%,auto);
             margin: 100px 0;
@@ -120,13 +124,14 @@ body {
                 padding: 0 20px;
                 font-size: 3rem;
                 text-align: center;
-                color: $terceario;
+                color: black;
             }
             p{
                 justify-content: center;
+                text-align: center;
                 padding: 0 20px;
                 font-size: 2rem;
-                color: $color4;
+                color: black;
             }
         }
         .main__section--desarrollo{
@@ -138,15 +143,15 @@ body {
         @include talla(100%, 100px);
         bottom: 0;
         text-align: center;
-        background-color: $principal;
+        background-color: #c5c6f1;
         border-top: 1px solid black;
         box-shadow: 1px 1px 8px rgb(47, 46, 46);
         z-index: 1;
         h3{
             margin-top: 10px;
             font-size: 2rem;
-            font-weight: 100;
-            color: white;
+            font-weight: 600;
+            color: black;
         }
         .footer__section--modal{ 
             position: relative;
@@ -157,16 +162,15 @@ body {
         .footer__section--ingresar{ 
             @include displayFlex(row, space-around, center);
             @include talla(100%,100%);
-            p{
+            a{
                 position: relative;
                 @include displayFlex(row, center, center);
                 height: 40px;
                 width: 200px;
                 margin-bottom: 25px;
                 font-size: 2rem;
-                font-weight: 600;
-                color: white;
-                background-color: $secundario;
+                color: black;
+                background-color: #6bc1f3;
                 border-radius: 10px;
                 box-shadow: 1px 2px 1px rgb(83, 81, 81);
                 opacity: 1;

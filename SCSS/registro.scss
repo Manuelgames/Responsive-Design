@@ -1,0 +1,56 @@
+/*
+1. Posicionamiento
+2. Modelo de caja
+3. Tipografia
+4. Visual (shadow box)
+5. Otros
+*/
+//Fonts
+//thin 100
+//regular 400
+//medium 500 italic
+$principal: #5cceee;
+$secundario: #24c0eb;
+$terceario: #cacaca;
+$color4: #eee8e8;
+$color5: #f1ebeb;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+@mixin talla($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin displayFlex($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    @include talla(100%, auto);
+    background-color: #6bc1f3;
+    header{
+        @include displayFlex(row, center,center);
+        @include talla(100%, 100px);
+        background-color: #24c0eb;
+        h2{
+            font-size: 2rem;
+        }
+    }
+}
