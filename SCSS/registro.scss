@@ -22,6 +22,8 @@ $color5: #f1ebeb;
 }
 
 html {
+    width: 100%;
+    height: auto;
     font-size: 62.5%;
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -43,14 +45,64 @@ a{
 }
 
 body{
+    @include displayFlex(column, center, center);
     @include talla(100%, auto);
     background-color: #6bc1f3;
     header{
         @include displayFlex(row, center,center);
         @include talla(100%, 100px);
         background-color: #24c0eb;
+        box-shadow: 1px 1px 1px black;
         h2{
-            font-size: 2rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+    }
+    main{
+        @include displayFlex(column, center, center);
+        @include talla(100%, auto);
+        font-weight: 400;
+        .main__registro--formulario{
+            @include displayFlex(column, center, center);
+            @include talla(100%, auto);
+            .registro__formulario{
+                @include displayFlex(column, center, center);
+                @include talla(500px, auto);
+                margin: 40px 0;
+                border: 1px solid white;
+                border-radius: 10px;
+                box-shadow: 1px 1px 1px rgb(150, 145, 145);
+                label{
+                    @include displayFlex(column, center, center);
+                    margin: 15px 0;
+                    font-size: 1.8rem;
+                    text-align: center;
+                    input{
+                        @include talla(300px, 30px);
+                        border: 1px solid white;
+                        border-radius: 10px;
+                    }
+                }
+                .terminos{
+                    @include displayFlex(row,center, center);
+                    @include talla(330px, 20px);
+                    input{
+                        @include talla(50px, 20px);
+                    }
+                    a{
+                        color: black;
+                        text-decoration: underline;
+                    }
+                }
+                #registroCuenta{
+                    @include talla(300px, 30px);
+                    margin:50px 0;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                }
+            }
         }
     }
 }

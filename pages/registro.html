@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" href="../SCSS/registro.css">
+    <link rel="stylesheet" href="../CSS/registro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,400;1,500&display=swap" rel="stylesheet">
@@ -14,7 +14,43 @@
         <h2>Registrate</h2>
     </header>
     <main>
-
+        <section class="main__registro--formulario">
+            <form class="registro__formulario" action="">
+                <label for="nombre">Nombre
+                    <input id="nombre" type="text" autocomplete="username">
+                </label>
+                <label for="apellidoP">Apellido Paterno
+                    <input id="apellidoP" type="text">
+                </label>
+                <label for="apellidoM">Apellido Materno
+                    <input id="apellidoM" type="text">
+                </label>
+                <label for="direccion">Direccion
+                    <input id="direccion" type="text">
+                </label>
+                <label for="telefono">Telefono
+                    <input id="telefono" type="text">
+                </label>
+                <label for="curp">CURP
+                    <input id="curp" type="text">
+                </label>
+                <label for="cedulaP">Cedula Profesional
+                    <input id="cedulaP" type="text">
+                </label>
+                <label for="correo">Correo
+                    <input id="correo" type="text" autocomplete="email">
+                </label>
+                <label for="password">Contraseña
+                    <input id="password" type="text">
+                </label>
+                <label class="terminos" for="condiciones">
+                    <input id="condiciones" type="checkbox">
+                    <a href="">Acepto terminos y condiciones</a>
+                </label>
+                <input id="registroCuenta" type="button" value="Guardar">
+            </form>
+        </section>
+        <hr>
     </main>
     <footer>
 
