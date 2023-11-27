@@ -1,0 +1,81 @@
+/*
+1. Posicionamiento
+2. Modelo de caja
+3. Tipografia
+4. Visual (shadow box)
+5. Otros
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  width: 100%;
+  height: auto;
+  font-size: 62.5%;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #24c0eb;
+  box-shadow: 1px 1px 1px black;
+}
+header h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .main__modal--rol {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+}
+main .main__section--rol {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  min-height: 300px;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 1px 2px 2px black;
+}
+main .main__section--rol h2 {
+  font-size: 3rem;
+}
+main .main__section--rol p {
+  font-size: 1.8rem;
+  color: #24c0eb;
+}
+main .main__section--rol button {
+  width: 200px;
+  height: 45px;
+  margin-top: 50px;
+  font-size: 2rem;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+main .main__section--rol button:hover {
+  background-color: #5cceee;
+}/*# sourceMappingURL=rolRegistro.css.map */

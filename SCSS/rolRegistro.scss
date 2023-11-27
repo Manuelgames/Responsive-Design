@@ -1,0 +1,88 @@
+/*
+1. Posicionamiento
+2. Modelo de caja
+3. Tipografia
+4. Visual (shadow box)
+5. Otros
+*/
+//Fonts
+//thin 100
+//regular 400
+//medium 500 italic
+$principal: #5cceee;
+$secundario: #24c0eb;
+$terceario: #cacaca;
+$color4: #eee8e8;
+$color5: #f1ebeb;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    width: 100%;
+    height: auto;
+    font-size: 62.5%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+@mixin talla($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin displayFlex($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+header{
+    @include displayFlex(row, center,center);
+    @include talla(100%, 100px);
+    background-color: #24c0eb;
+    box-shadow: 1px 1px 1px black;
+    h2{
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+}
+main{
+    @include talla(100%, 100vh);
+    @include displayFlex(column, center, center);
+    .main__modal--rol{
+        position: absolute;
+        @include talla(100%, 100vh);
+        background-color: black;
+        opacity: 0.7;
+    }
+    .main__section--rol{
+        position: fixed;
+        @include displayFlex(column, center, center);
+        @include talla(300px, auto);
+        min-height: 300px;
+        background-color: white;
+        border-radius: 7px;
+        box-shadow: 1px 2px 2px black;
+        h2{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.8rem;
+            color: $secundario;
+        }
+        button{
+            @include talla(200px, 45px);
+            margin-top:50px;
+            font-size: 2rem;
+            border: 1px solid white;
+            border-radius: 10px;
+            &:hover{
+                background-color: $principal;
+            }
+        }
+    }
+}
