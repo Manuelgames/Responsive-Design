@@ -26,6 +26,7 @@ html {
     height: auto;
     font-size: 62.5%;
     font-family: 'Roboto Condensed', sans-serif;
+    overflow-y: hidden;
 }
 
 @mixin talla($width, $height) {
@@ -41,15 +42,20 @@ html {
 }
 
 header{
-    @include displayFlex(row, center,center);
+    @include displayFlex(row, space-between,center);
     @include talla(100%, 100px);
-    background-color: #24c0eb;
+    background-color: white;
     box-shadow: 1px 1px 1px black;
+    img{
+        @include talla(40px, 40px);
+        margin-left: 30px;
+    }
     h2{
         font-size: 2.5rem;
         font-weight: 600;
     }
 }
+
 main{
     @include talla(100%, 100vh);
     @include displayFlex(column, center, center);
@@ -82,6 +88,7 @@ main{
             border-radius: 10px;
             &:hover{
                 background-color: $principal;
+                color: white;
             }
         }
     }

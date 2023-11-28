@@ -28,6 +28,11 @@ html {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+input{
+    background-color: $color5;
+    text-align: center;
+}
+
 @mixin talla($width, $height) {
     width: $width;
     height: $height;
@@ -49,10 +54,14 @@ body{
     @include talla(100%, auto);
     background-color: #6bc1f3;
     header{
-        @include displayFlex(row, center,center);
+        @include displayFlex(row, space-between,center);
         @include talla(100%, 100px);
-        background-color: #24c0eb;
+        background-color: white;
         box-shadow: 1px 1px 1px black;
+        img{
+            @include talla(40px, 40px);
+            margin-left: 30px;
+        }
         h2{
             font-size: 2.5rem;
             font-weight: 600;
