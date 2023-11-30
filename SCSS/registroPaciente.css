@@ -29,10 +29,9 @@ a {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
   align-items: center;
+  justify-items: center;
   width: 100%;
   height: auto;
   background-color: #6bc1f3;
@@ -52,9 +51,14 @@ body header img {
   height: 40px;
   margin-left: 30px;
 }
+body header img:hover {
+  border-radius: 50%;
+  background-color: brown;
+}
 body header h2 {
   font-size: 2.5rem;
   font-weight: 600;
+  margin-right: 34px;
 }
 body main {
   display: flex;
@@ -81,6 +85,7 @@ body main .main__registro--formulario .registro__formulario {
   width: 500px;
   height: auto;
   margin: 40px 0;
+  background-color: white;
   border: 1px solid white;
   border-radius: 10px;
   box-shadow: 1px 1px 1px rgb(150, 145, 145);
@@ -124,4 +129,8 @@ body main .main__registro--formulario .registro__formulario #registroCuenta {
   font-weight: 600;
   border: 1px solid white;
   border-radius: 10px;
+}
+body main .main__registro--formulario .registro__formulario #registroCuenta:hover {
+  background-color: #5cceee;
+  cursor: pointer;
 }/*# sourceMappingURL=registroPaciente.css.map */

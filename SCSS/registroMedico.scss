@@ -50,7 +50,9 @@ a{
 }
 
 body{
-    @include displayFlex(column, center, center);
+    display: grid;
+    align-items: center;
+    justify-items: center;
     @include talla(100%, auto);
     background-color: #6bc1f3;
     header{
@@ -61,10 +63,15 @@ body{
         img{
             @include talla(40px, 40px);
             margin-left: 30px;
+            &:hover{
+                border-radius: 50%;
+                background-color: brown;
+            }
         }
         h2{
             font-size: 2.5rem;
             font-weight: 600;
+            margin-right: 36px;
         }
     }
     main{
@@ -78,6 +85,7 @@ body{
                 @include displayFlex(column, center, center);
                 @include talla(500px, auto);
                 margin: 40px 0;
+                background-color: white;
                 border: 1px solid white;
                 border-radius: 10px;
                 box-shadow: 1px 1px 1px rgb(150, 145, 145);
@@ -110,6 +118,10 @@ body{
                     font-weight: 600;
                     border: 1px solid white;
                     border-radius: 10px;
+                    &:hover{
+                        background-color: $principal;
+                        cursor: pointer;
+                    }
                 }
             }
         }

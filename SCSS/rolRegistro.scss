@@ -41,54 +41,75 @@ html {
     align-items: $align;
 }
 
-header{
-    @include displayFlex(row, space-between,center);
-    @include talla(100%, 100px);
-    background-color: white;
-    box-shadow: 1px 1px 1px black;
-    img{
-        @include talla(40px, 40px);
-        margin-left: 30px;
-    }
-    h2{
-        font-size: 2.5rem;
-        font-weight: 600;
-    }
-}
-
-main{
-    @include talla(100%, 100vh);
-    @include displayFlex(column, center, center);
-    .main__modal--rol{
-        position: absolute;
-        @include talla(100%, 100vh);
-        background-color: black;
-        opacity: 0.7;
-    }
-    .main__section--rol{
-        position: fixed;
-        @include displayFlex(column, center, center);
-        @include talla(300px, auto);
-        min-height: 300px;
+body {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    @include talla(100%, auto);
+    header {
+        @include displayFlex(row, space-between, center);
+        @include talla(100%, 100px);
         background-color: white;
-        border-radius: 7px;
-        box-shadow: 1px 2px 2px black;
-        h2{
-            font-size: 3rem;
-        }
-        p{
-            font-size: 1.8rem;
-            color: $secundario;
-        }
-        button{
-            @include talla(200px, 45px);
-            margin-top:50px;
-            font-size: 2rem;
-            border: 1px solid white;
-            border-radius: 10px;
+        box-shadow: 1px 1px 1px black;
+
+        img {
+            @include talla(40px, 40px);
+            margin-left: 30px;
             &:hover{
-                background-color: $principal;
-                color: white;
+                border-radius: 50%;
+                background-color: brown;
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-right: 44px;
+        }
+    }
+
+    main {
+        @include talla(100%, 100vh);
+        @include displayFlex(column, center, center);   
+        font-weight: 400;
+        .main__modal--rol {
+            position: absolute;
+            @include talla(100%, 100vh);
+            background-color: black;
+            opacity: 0.7;
+        }
+
+        .main__section--rol {
+            position: fixed;
+            @include displayFlex(column, center, center);
+            @include talla(300px, auto);
+            min-height: 300px;
+            margin-bottom: 80px;
+            background-color: white;
+            border-radius: 7px;
+            box-shadow: 1px 2px 2px black;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+                color: $secundario;
+            }
+
+            button {
+                @include talla(200px, 45px);
+                margin-top: 50px;
+                font-size: 2rem;
+                border: 1px solid white;
+                border-radius: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $principal;
+                    color: white;
+                }
             }
         }
     }
