@@ -139,6 +139,15 @@ body {
         .main__section--desarrollo{
             @extend .main__section--objetivo;
         }
+        .main__section--precios{
+            @include talla(100%, auto);
+            @include displayFlex(row, center, center);
+            background-color: #24c0eb;
+            .section__precios--titulo{
+                @include talla(100%, 100px);
+                @include displayFlex(column, center, center)
+            }
+        }
     }
     footer{
         position: fixed;
