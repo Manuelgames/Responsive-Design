@@ -142,10 +142,32 @@ body {
         .main__section--precios{
             @include talla(100%, auto);
             @include displayFlex(row, center, center);
-            background-color: #24c0eb;
+            margin: 30px 0px;
+            background-color: #ebd4e5;
             .section__precios--titulo{
-                @include talla(100%, 100px);
-                @include displayFlex(column, center, center)
+                @include talla(100%, auto);
+                @include displayFlex(column, center, center);
+                h2{
+                    text-align: center;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: black;
+                }
+                p{
+                    text-align: center;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: rgb(82, 81, 81);
+                }
+                .backgroundprecios{
+                    width: 150px;
+                    height: 150px;
+                    margin: 20px auto 20px auto;
+                    background-image: url('/assets/icons/hucha.png');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
             }
         }
     }

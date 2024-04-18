@@ -133,15 +133,37 @@ body main .main__section--precios {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #24c0eb;
+  margin: 30px 0px;
+  background-color: #ebd4e5;
 }
 body main .main__section--precios .section__precios--titulo {
   width: 100%;
-  height: 100px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+body main .main__section--precios .section__precios--titulo h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+}
+body main .main__section--precios .section__precios--titulo p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(82, 81, 81);
+}
+body main .main__section--precios .section__precios--titulo .backgroundprecios {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto 20px auto;
+  background-image: url("/assets/icons/hucha.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 body footer {
   position: fixed;
