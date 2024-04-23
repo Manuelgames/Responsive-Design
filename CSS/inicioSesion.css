@@ -16,6 +16,7 @@ html {
   height: auto;
   font-size: 62.5%;
   font-family: "Roboto Condensed", sans-serif;
+  overflow-y: hidden;
 }
 
 input {
@@ -33,7 +34,7 @@ body {
   align-items: center;
   justify-items: center;
   width: 100%;
-  height: auto;
+  height: 100vh;
   background-color: #6bc1f3;
 }
 body header {
@@ -58,7 +59,7 @@ body header img:hover {
 body header h2 {
   font-size: 2.5rem;
   font-weight: 600;
-  margin-right: 36px;
+  margin-right: 40px;
 }
 body main {
   display: flex;
@@ -66,71 +67,61 @@ body main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 100vh;
   font-weight: 400;
 }
-body main .main__registro--formulario {
+body main .main__container--iniciosesion {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 60vw;
   height: auto;
-}
-body main .main__registro--formulario .registro__formulario {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-  height: auto;
-  margin: 40px 0;
+  margin-bottom: 80px;
   background-color: white;
-  border: 1px solid white;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px rgb(150, 145, 145);
+  border-radius: 15px;
 }
-body main .main__registro--formulario .registro__formulario label {
+body main .main__container--iniciosesion .container__iniciosesion--form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+body main .main__container--iniciosesion .container__iniciosesion--form label {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 15px 0;
   font-size: 1.8rem;
-  text-align: center;
 }
-body main .main__registro--formulario .registro__formulario label input {
-  width: 300px;
+body main .main__container--iniciosesion .container__iniciosesion--form label input {
+  width: 200px;
   height: 30px;
   border: 1px solid white;
   border-radius: 10px;
 }
-body main .main__registro--formulario .registro__formulario .terminos {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 330px;
-  height: 20px;
+body main .main__container--iniciosesion .container__iniciosesion--form a {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #24c0eb;
 }
-body main .main__registro--formulario .registro__formulario .terminos input {
-  width: 50px;
-  height: 20px;
-}
-body main .main__registro--formulario .registro__formulario .terminos a {
-  color: black;
+body main .main__container--iniciosesion .container__iniciosesion--form a:hover {
+  color: rgb(17, 70, 99);
   text-decoration: underline;
 }
-body main .main__registro--formulario .registro__formulario #registroCuenta {
-  width: 300px;
+body main .main__container--iniciosesion .container__iniciosesion--form #inicioSesion {
+  width: 200px;
   height: 30px;
-  margin: 50px 0;
+  margin: 30px 0;
   font-size: 1.8rem;
   font-weight: 600;
   border: 1px solid white;
   border-radius: 10px;
 }
-body main .main__registro--formulario .registro__formulario #registroCuenta:hover {
+body main .main__container--iniciosesion .container__iniciosesion--form #inicioSesion:hover {
   background-color: #5cceee;
   cursor: pointer;
-}/*# sourceMappingURL=registroMedico.css.map */
+}/*# sourceMappingURL=inicioSesion.css.map */
