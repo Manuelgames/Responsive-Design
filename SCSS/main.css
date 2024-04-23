@@ -105,6 +105,7 @@ body header .header__contenedor--secundario .header--button img {
   margin: 5px 0 0 10px;
 }
 body main {
+  margin-top: 140px;
   margin-bottom: 130px;
 }
 body main .main__section--objetivo, body main .main__section--desarrollo {

@@ -117,6 +117,7 @@ body {
         }
     }
     main{
+        margin-top: 140px;
         margin-bottom: 130px;
         .main__section--objetivo{
             @include talla(100%,auto);
