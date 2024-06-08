@@ -141,7 +141,7 @@ body {
         }
         .main__section--precios{
             @include talla(100%, auto);
-            @include displayFlex(row, center, center);
+            @include displayFlex(column, center, center);
             margin: 30px 0px;
             background-color: #ebd4e5;
             .section__precios--titulo{
