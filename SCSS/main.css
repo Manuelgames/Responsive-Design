@@ -131,7 +131,7 @@ body main .main__section--precios {
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 30px 0px;
@@ -165,6 +165,9 @@ body main .main__section--precios .section__precios--titulo .backgroundprecios {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+body main .main__section--precios .section__precios-container .precios__container-table {
+  width: 70%;
 }
 body footer {
   position: fixed;
