@@ -105,6 +105,7 @@ body header .header__contenedor--secundario .header--button img {
   margin: 5px 0 0 10px;
 }
 body main {
+  margin-top: 140px;
   margin-bottom: 130px;
 }
 body main .main__section--objetivo, body main .main__section--desarrollo {
@@ -164,6 +165,24 @@ body main .main__section--precios .section__precios--titulo .backgroundprecios {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+body main .main__section--precios .section__precios-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+body main .main__section--precios .section__precios-container .precios__container-table {
+  margin: 0 auto;
+}
+body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency {
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 body footer {
   position: fixed;

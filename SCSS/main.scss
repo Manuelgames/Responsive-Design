@@ -37,13 +37,16 @@ html {
     justify-content: $content;
     align-items: $align;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
 }
+
 body {
     @include talla(100%, auto);
     background-color: $color4;
+
     header {
         position: relative;
         @include displayFlex(column, center, center);
@@ -51,6 +54,7 @@ body {
         min-width: 324px;
         text-align: center;
         background-image: linear-gradient(to bottom, #24c0eb, #9cc2f8, #d7c8ee, #f0d7e4, #f1ebeb);
+
         .header__contenedor--primario {
             @include displayFlex(row, center, center);
             width: 100%;
@@ -77,6 +81,7 @@ body {
             margin-top: 40px;
             align-self: center;
             text-align: center;
+
             h1 {
                 font-size: 2.4rem;
                 color: $color5;
@@ -84,11 +89,13 @@ body {
                 line-height: 3rem;
                 color: black;
             }
+
             p {
                 margin-top: 20px;
                 font-size: 1.8rem;
                 color: black;
             }
+
             .header--button {
                 position: absolute;
                 display: block;
@@ -105,9 +112,11 @@ body {
                 background-color: $color4;
                 border-radius: 5px;
                 box-shadow: 1px 2px 2px black;
-                &:hover{
+
+                &:hover {
                     background-color: rgb(231, 219, 219);
                 }
+
                 img {
                     width: 23px;
                     height: 20px;
@@ -116,20 +125,24 @@ body {
             }
         }
     }
-    main{
+
+    main {
         margin-top: 140px;
         margin-bottom: 130px;
-        .main__section--objetivo{
-            @include talla(100%,auto);
+
+        .main__section--objetivo {
+            @include talla(100%, auto);
             margin: 100px 0;
-            h2{
+
+            h2 {
                 margin-bottom: 20px;
                 padding: 0 20px;
                 font-size: 3rem;
                 text-align: center;
                 color: black;
             }
-            p{
+
+            p {
                 justify-content: center;
                 text-align: center;
                 padding: 0 20px;
@@ -137,30 +150,36 @@ body {
                 color: black;
             }
         }
-        .main__section--desarrollo{
+
+        .main__section--desarrollo {
             @extend .main__section--objetivo;
         }
-        .main__section--precios{
+
+        .main__section--precios {
             @include talla(100%, auto);
             @include displayFlex(column, center, center);
             margin: 30px 0px;
             background-color: #ebd4e5;
-            .section__precios--titulo{
+
+            .section__precios--titulo {
                 @include talla(100%, auto);
                 @include displayFlex(column, center, center);
-                h2{
+
+                h2 {
                     text-align: center;
                     font-size: 2rem;
                     font-weight: 600;
                     color: black;
                 }
-                p{
+
+                p {
                     text-align: center;
                     font-size: 1.5rem;
                     font-weight: 600;
                     color: rgb(82, 81, 81);
                 }
-                .backgroundprecios{
+
+                .backgroundprecios {
                     width: 150px;
                     height: 150px;
                     margin: 20px auto 20px auto;
@@ -170,14 +189,25 @@ body {
                     background-repeat: no-repeat;
                 }
             }
-            .section__precios-container{
-                .precios__container-table{
-                    width: 70%;
+
+            .section__precios-container {
+                @include talla(100%, auto);
+                @include displayFlex(column, center, center);
+                text-align: justify;
+                .precios__container-table {
+                    margin: 0 auto;
+                    .container__table--currency {
+                        width: 70%;
+                        min-width: 235px;
+                        max-width: 500px;
+                        margin: 0 auto;
+                    }
                 }
             }
         }
     }
-    footer{
+
+    footer {
         position: fixed;
         @include talla(100%, 100px);
         bottom: 0;
@@ -186,22 +216,26 @@ body {
         border-top: 1px solid black;
         box-shadow: 1px 1px 8px rgb(47, 46, 46);
         z-index: 1;
-        h3{
+
+        h3 {
             margin-top: 10px;
             font-size: 2rem;
             font-weight: 600;
             color: black;
         }
-        .footer__section--modal{ 
+
+        .footer__section--modal {
             position: relative;
             @include talla(100%, 100%);
             background-color: black;
             z-index: 4;
         }
-        .footer__section--ingresar{ 
+
+        .footer__section--ingresar {
             @include displayFlex(row, space-around, center);
-            @include talla(100%,100%);
-            a{
+            @include talla(100%, 100%);
+
+            a {
                 position: relative;
                 @include displayFlex(row, center, center);
                 height: 40px;
