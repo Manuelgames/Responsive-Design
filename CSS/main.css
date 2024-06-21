@@ -175,14 +175,76 @@ body main .main__section--precios .section__precios-container {
   align-items: center;
   text-align: justify;
 }
+body main .main__section--precios .section__precios-container .precios__container-title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .main__section--precios .section__precios-container .precios__container-title p {
+  margin: 0 30px 0 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+}
 body main .main__section--precios .section__precios-container .precios__container-table {
-  margin: 0 auto;
+  margin: 30px auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency {
-  width: 70%;
+  width: 100%;
   min-width: 235px;
   max-width: 500px;
-  margin: 0 auto;
+  background-color: rgb(124, 120, 120);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px rgb(124, 120, 120);
+}
+body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency tr {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency tr td {
+  width: 50%;
+  line-height: 40px;
+  font-size: 1.6rem;
+  background-color: #eee8e8;
+}
+body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency tr .table-rigth {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency tr .table-left {
+  color: rgb(91, 88, 88);
+}
+body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency tr .table__top-left {
+  border-radius: 10px 0 0 0;
+}
+body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency tr .table__top-rigth {
+  border-radius: 0 10px 0 0;
+}
+body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency tr .table__buttom-left {
+  border-radius: 0 0 0 10px;
+}
+body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency tr .table__buttom-rigth {
+  border-radius: 0 0 10px 0;
+}
+body main .main__section--precios .section__precios-container .precios__container-table .container__table--currency tr .down {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url("../assets/icons/dinero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 0 0 10px;
 }
 body footer {
   position: fixed;

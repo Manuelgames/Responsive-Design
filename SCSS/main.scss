@@ -194,13 +194,67 @@ body {
                 @include talla(100%, auto);
                 @include displayFlex(column, center, center);
                 text-align: justify;
+
+                .precios__container-title {
+                    @include talla(100%, auto);
+                    @include displayFlex(column, center, center);
+                    p {
+                        margin: 0 30px 0 0;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        color: black;
+                    }
+                }
+
                 .precios__container-table {
-                    margin: 0 auto;
+                    margin: 30px auto;
+                    @include talla(100%, auto);
+                    @include displayFlex(column, center, center);
                     .container__table--currency {
-                        width: 70%;
+                        width: 100%;
                         min-width: 235px;
                         max-width: 500px;
-                        margin: 0 auto;
+                        background-color: rgb(124, 120, 120);
+                        border-radius: 10px;
+                        box-shadow: 1px 1px 5px 1px rgb(124, 120, 120);
+                        tr {
+                            @include talla(100%, 30px);
+                            text-align: center;
+                            td {
+                                width: 50%;
+                                line-height: 40px;
+                                font-size: 1.6rem;
+                                background-color: $color4;
+                            }
+                            .table-rigth{
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-weight: 600;
+                            }
+                            .table-left{
+                                color: rgb(91, 88, 88);
+                            }
+                            .table__top-left{
+                                border-radius: 10px 0 0 0;
+                            }
+                            .table__top-rigth{
+                                border-radius: 0 10px 0 0;
+                            }
+                            .table__buttom-left{
+                                border-radius: 0 0 0 10px;
+                            }
+                            .table__buttom-rigth{
+                                border-radius: 0 0 10px 0;
+                            }
+                            .down{
+                                display: inline-block;
+                                @include talla(15px,15px);
+                                background-image: url("../assets/icons/dinero.png");
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                margin: 0 0 0 10px;
+                            }
+                        }
                     }
                 }
             }
