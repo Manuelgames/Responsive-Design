@@ -110,6 +110,7 @@ body main {
 body main .main__section--objetivo, body main .main__section--desarrollo {
   width: 100%;
   height: auto;
+  min-width: 300px;
   margin: 100px 0;
 }
 body main .main__section--objetivo h2, body main .main__section--desarrollo h2 {
@@ -126,9 +127,13 @@ body main .main__section--objetivo p, body main .main__section--desarrollo p {
   font-size: 2rem;
   color: black;
 }
+body main .main__section--desarrollo {
+  min-width: 300px;
+}
 body main .main__section--precios {
   width: 100%;
   height: auto;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -261,7 +266,7 @@ body main .main__product--detail {
   position: relative;
   width: 100%;
   height: auto;
-  min-width: 320px;
+  min-width: 350px;
   text-align: center;
   padding: 20px 10px;
   background-color: #add3ea;
@@ -278,14 +283,159 @@ body main .main__product--detail .product-logo {
   background-repeat: no-repeat;
 }
 body main .main__product--detail .product-detail--card {
-  margin-top: 30px;
+  margin: 40px 0;
 }
 body main .main__product--detail .product-detail--card h2 {
-  font-size: 2rem;
+  font-size: 2.9rem;
+  color: #eee8e8;
 }
 body main .main__product--detail .product-detail--card p {
   font-size: 1.6rem;
+  font-weight: 200;
+  color: #f1ebeb;
+}
+body main .main__product--detail .product-cards--container .product-detail--card {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: auto;
+  min-height: 180px;
+  margin: 55px auto;
+  padding: 15px;
+  background-color: #44c0ee;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+body main .main__product--detail .product-cards--container .product-detail--card .time {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../assets/icons/hourglass (1).png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body main .main__product--detail .product-cards--container .product-detail--card .economico {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../assets/icons/dinero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body main .main__product--detail .product-cards--container .product-detail--card .calidad {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../assets/icons/badge.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body main .main__product--detail .product-cards--container .product-detail--card .product--card-title {
+  font-size: 2.5rem;
   font-weight: 600;
+  color: #eee8e8;
+  line-height: 50px;
+}
+body main .main__product--detail .product-cards--container .product-detail--card .product--card--body {
+  font-size: 1.9rem;
+  font-weight: 200;
+  color: #f1ebeb;
+}
+body main .salud-img-container {
+  width: 100%;
+  min-width: 350px;
+  height: 40vh;
+  margin: 20px 0;
+  background-image: url("../assets/imgs/diventare-medico.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .salud-img-container h2 {
+  padding-top: 65px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 2rem;
+  color: white;
+}
+body main .main-planes-container {
+  width: 100%;
+  min-width: 350px;
+  height: auto;
+  padding-bottom: 70px;
+  text-align: center;
+}
+body main .main-planes-container .planes-title {
+  width: 90%;
+  min-width: 320px;
+  margin: 0 auto;
+}
+body main .main-planes-container .planes-title h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-top: 40px;
+}
+body main .main-planes-container .planes-title p {
+  font-size: 1.5rem;
+  padding-top: 10px;
+}
+body main .main-planes-container .planes-container--slider {
+  height: auto;
+}
+body main .main-planes-container .planes-container--slider .planes-container--card {
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 50px auto 0;
+  padding: 0 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px black;
+}
+body main .main-planes-container .planes-container--slider .planes-container--card .recomendado {
+  display: flex;
+  position: absolute;
+  top: -17px;
+  left: calc(50% - 60px);
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  background-color: #24c0eb;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container {
+  padding: 30px 0;
+}
+body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--title {
+  font-size: 3rem;
+  font-weight: 300;
+}
+body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--price {
+  padding-top: 15px;
+  font-size: 4rem;
+  font-weight: bold;
+}
+body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--price span {
+  font-size: 1.4rem;
+}
+body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--saving {
+  padding-top: 15px;
+  font-size: 2rem;
+}
+body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--caa {
+  width: 120px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #c5c6f1;
 }
 body footer {
   position: fixed;

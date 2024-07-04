@@ -131,6 +131,7 @@ body {
 
         .main__section--objetivo {
             @include talla(100%, auto);
+            min-width: 300px;
             margin: 100px 0;
 
             h2 {
@@ -152,10 +153,12 @@ body {
 
         .main__section--desarrollo {
             @extend .main__section--objetivo;
+            min-width: 300px;
         }
 
         .main__section--precios {
             @include talla(100%, auto);
+            min-width: 350px;
             @include displayFlex(column, center, center);
             margin: 30px 0px;
             background-color: #ebd4e5;
@@ -281,16 +284,18 @@ body {
                         }
                     }
                 }
-            }            
+            }
         }
+
         .main__product--detail {
             position: relative;
             @include talla(100%, auto);
-            min-width: 320px;
+            min-width: 350px;
             text-align: center;
             padding: 20px 10px;
             background-color: #add3ea;
-            .product-logo{
+
+            .product-logo {
                 position: absolute;
                 top: -30px;
                 left: calc(50% - 30px);
@@ -301,14 +306,183 @@ body {
                 background-position: center;
                 background-repeat: no-repeat;
             }
-            .product-detail--card{
-                margin-top: 30px;
-                h2{
-                    font-size: 2rem;
+
+            .product-detail--card {
+                margin: 40px 0;
+
+                h2 {
+                    font-size: 2.9rem;
+                    color: $color4;
                 }
-                p{
+
+                p {
                     font-size: 1.6rem;
+                    font-weight: 200;
+                    color: $color5;
+                }
+            }
+
+            .product-cards--container {
+                .product-detail--card {
+                    width: 90%;
+                    min-width: 288px;
+                    max-width: 400px;
+                    height: auto;
+                    min-height: 180px;
+                    margin: 55px auto;
+                    padding: 15px;
+                    background-color: #44c0ee;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+
+                    .time {
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        background-image: url('../assets/icons/hourglass\ \(1\).png');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    .economico {
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        background-image: url('../assets/icons/dinero.png');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    .calidad {
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        background-image: url('../assets/icons/badge.png');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    .product--card-title {
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        color: $color4;
+                        line-height: 50px;
+                    }
+
+                    .product--card--body {
+                        font-size: 1.9rem;
+                        font-weight: 200;
+                        color: $color5;
+                    }
+
+                }
+            }
+        }
+
+        .salud-img-container {
+            width: 100%;
+            min-width: 350px;
+            height: 40vh;
+            margin: 20px 0;
+            background-image: url('../assets/imgs/diventare-medico.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            h2 {
+                padding-top: 65px;
+                padding-left: 20px;
+                font-weight: 600;
+                font-size: 3rem;
+                line-height: 2rem;
+                color: white;
+            }
+        }
+
+        .main-planes-container {
+            width: 100%;
+            min-width: 350px;
+            height: auto;
+            padding-bottom: 70px;
+            text-align: center;
+
+            .planes-title {
+                width: 90%;
+                min-width: 320px;
+                margin: 0 auto;
+
+                h2 {
+                    font-size: 2rem;
                     font-weight: 600;
+                    padding-top: 40px;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    padding-top: 10px;
+                }
+            }
+
+            .planes-container--slider {
+                height: auto;
+                .planes-container--card {
+                    position: relative;
+                    width: 70%;
+                    min-width: 230px;
+                    max-width: 300px;
+                    height: 250px;
+                    margin: 50px auto 0;
+                    padding: 0 15px;
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: 0 1px 3px black;
+
+                    .recomendado {
+                        display: flex;
+                        position: absolute;
+                        top: -17px;
+                        left: calc(50% - 60px);
+                        justify-content: center;
+                        align-items: center;
+                        width: 120px;
+                        height: 30px;
+                        background-color: $secundario;
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        border-radius: 5px;
+                    }
+
+                    .plan-info-container {
+                        padding: 30px 0;
+
+                        .plan-card--title {
+                            font-size: 3rem;
+                            font-weight: 300;
+                        }
+
+                        .plan-card--price {
+                            padding-top: 15px;
+                            font-size: 4rem;
+                            font-weight: bold;
+                            span{
+                                font-size: 1.4rem;
+                            }
+                        }
+
+                        .plan-card--saving {
+                            padding-top: 15px;
+                            font-size: 2rem;
+                        }
+                        .plan-card--caa{
+                            width: 120px;
+                            height: 40px;
+                            border-radius: 6px;
+                            background-color: #c5c6f1;
+                        }
+                    }
                 }
             }
         }
