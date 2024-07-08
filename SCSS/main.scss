@@ -346,23 +346,18 @@ body {
                     }
 
                     .economico {
-                        display: inline-block;
-                        width: 50px;
-                        height: 50px;
+                        @extend .time;
                         background-image: url('../assets/icons/dinero.png');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        background-position: center;
                     }
 
                     .calidad {
-                        display: inline-block;
-                        width: 50px;
-                        height: 50px;
+                        @extend .time;
                         background-image: url('../assets/icons/badge.png');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        background-position: center;
+                    }
+
+                    .seguridad {
+                        @extend .time;
+                        background-image: url('../assets/icons/shield.png');
                     }
 
                     .product--card-title {
@@ -406,7 +401,6 @@ body {
             width: 100%;
             min-width: 350px;
             height: auto;
-            padding-bottom: 70px;
             text-align: center;
 
             .planes-title {
@@ -427,16 +421,24 @@ body {
             }
 
             .planes-container--slider {
-                height: auto;
+                display: flex;
+                height: 316px;
+                padding-top: 30px;
+                overflow-x: scroll;
+                overscroll-behavior-x: contain;
+                scroll-snap-type: x proximity;
+
                 .planes-container--card {
                     position: relative;
+                    scroll-snap-align: center;
                     width: 70%;
                     min-width: 230px;
                     max-width: 300px;
                     height: 250px;
-                    margin: 50px auto 0;
+                    margin: 0 31px;
                     padding: 0 15px;
                     background-color: white;
+                    border: none;
                     border-radius: 10px;
                     box-shadow: 0 1px 3px black;
 
@@ -450,6 +452,7 @@ body {
                         width: 120px;
                         height: 30px;
                         background-color: $secundario;
+                        color: white;
                         font-size: 1.8rem;
                         font-weight: bold;
                         border-radius: 5px;
@@ -467,7 +470,8 @@ body {
                             padding-top: 15px;
                             font-size: 4rem;
                             font-weight: bold;
-                            span{
+
+                            span {
                                 font-size: 1.4rem;
                             }
                         }
@@ -476,12 +480,48 @@ body {
                             padding-top: 15px;
                             font-size: 2rem;
                         }
-                        .plan-card--caa{
-                            width: 120px;
+
+                        .plan-card--caa {
+                            width: 180px;
                             height: 40px;
+                            margin: 8px 0;
                             border-radius: 6px;
-                            background-color: #c5c6f1;
+                            border: none;
+                            background-color: $principal;
+                            color: white;
+                            font-size: 2rem;
+                            font-weight: bold;
+
+                            .seleccion {
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                                margin-left: 6px;
+                                background-image: url('../assets/icons/right-arrow.png');
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                vertical-align: text-bottom;
+                            }
                         }
+                    }
+
+                    .recomendado2 {
+                        @extend .recomendado;
+                        background-color: rgb(5, 208, 5);
+                    }
+
+                    .plan-card--caa2 {
+                        @extend .plan-card--caa;
+                    }
+
+                    .recomendado3 {
+                        @extend .recomendado;
+                        background-color: rgb(164, 39, 164);
+                    }
+
+                    .plan-card--caa3 {
+                        @extend .plan-card--caa;
                     }
                 }
             }

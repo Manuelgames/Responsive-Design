@@ -306,7 +306,7 @@ body main .main__product--detail .product-cards--container .product-detail--card
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
 }
-body main .main__product--detail .product-cards--container .product-detail--card .time {
+body main .main__product--detail .product-cards--container .product-detail--card .time, body main .main__product--detail .product-cards--container .product-detail--card .seguridad, body main .main__product--detail .product-cards--container .product-detail--card .calidad, body main .main__product--detail .product-cards--container .product-detail--card .economico {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -316,22 +316,13 @@ body main .main__product--detail .product-cards--container .product-detail--card
   background-position: center;
 }
 body main .main__product--detail .product-cards--container .product-detail--card .economico {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
   background-image: url("../assets/icons/dinero.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 body main .main__product--detail .product-cards--container .product-detail--card .calidad {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
   background-image: url("../assets/icons/badge.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+body main .main__product--detail .product-cards--container .product-detail--card .seguridad {
+  background-image: url("../assets/icons/shield.png");
 }
 body main .main__product--detail .product-cards--container .product-detail--card .product--card-title {
   font-size: 2.5rem;
@@ -366,7 +357,6 @@ body main .main-planes-container {
   width: 100%;
   min-width: 350px;
   height: auto;
-  padding-bottom: 70px;
   text-align: center;
 }
 body main .main-planes-container .planes-title {
@@ -384,21 +374,28 @@ body main .main-planes-container .planes-title p {
   padding-top: 10px;
 }
 body main .main-planes-container .planes-container--slider {
-  height: auto;
+  display: flex;
+  height: 316px;
+  padding-top: 30px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
 }
 body main .main-planes-container .planes-container--slider .planes-container--card {
   position: relative;
+  scroll-snap-align: center;
   width: 70%;
   min-width: 230px;
   max-width: 300px;
   height: 250px;
-  margin: 50px auto 0;
+  margin: 0 31px;
   padding: 0 15px;
   background-color: white;
+  border: none;
   border-radius: 10px;
   box-shadow: 0 1px 3px black;
 }
-body main .main-planes-container .planes-container--slider .planes-container--card .recomendado {
+body main .main-planes-container .planes-container--slider .planes-container--card .recomendado, body main .main-planes-container .planes-container--slider .planes-container--card .recomendado3, body main .main-planes-container .planes-container--slider .planes-container--card .recomendado2 {
   display: flex;
   position: absolute;
   top: -17px;
@@ -408,6 +405,7 @@ body main .main-planes-container .planes-container--slider .planes-container--ca
   width: 120px;
   height: 30px;
   background-color: #24c0eb;
+  color: white;
   font-size: 1.8rem;
   font-weight: bold;
   border-radius: 5px;
@@ -431,11 +429,33 @@ body main .main-planes-container .planes-container--slider .planes-container--ca
   padding-top: 15px;
   font-size: 2rem;
 }
-body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--caa {
-  width: 120px;
+body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--caa, body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--caa3, body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--caa2 {
+  width: 180px;
   height: 40px;
+  margin: 8px 0;
   border-radius: 6px;
-  background-color: #c5c6f1;
+  border: none;
+  background-color: #5cceee;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--caa .seleccion, body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--caa3 .seleccion, body main .main-planes-container .planes-container--slider .planes-container--card .plan-info-container .plan-card--caa2 .seleccion {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  background-image: url("../assets/icons/right-arrow.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: text-bottom;
+}
+body main .main-planes-container .planes-container--slider .planes-container--card .recomendado2 {
+  background-color: rgb(5, 208, 5);
+}
+body main .main-planes-container .planes-container--slider .planes-container--card .recomendado3 {
+  background-color: rgb(164, 39, 164);
 }
 body footer {
   position: fixed;
